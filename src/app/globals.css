@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FBF3E9;
+  font-family: Manrope, system-ui, -apple-system, sans-serif;
+  color: #4A3F39;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, select, button, textarea {
+  font-family: inherit;
+}
+
+::placeholder {
+  color: #B9ACA1;
+}
+
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgba(201, 152, 146, 0.5);
+}
+
+@keyframes mdIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes ovIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-mdIn    { animation: mdIn 0.4s ease both; }
+.animate-mdInFast { animation: mdIn 0.28s ease both; }
+.animate-ovIn    { animation: ovIn 0.2s ease both; }
+.animate-toastIn { animation: toastIn 0.3s ease both; }
+.animate-spin    { animation: spin 1s linear infinite; }
+
+/* Scrollbar suave */
+.scrl::-webkit-scrollbar       { width: 8px; height: 8px; }
+.scrl::-webkit-scrollbar-thumb { background: #E3D2C4; border-radius: 8px; }
